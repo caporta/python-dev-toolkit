@@ -1,1 +1,33 @@
 PYTHON DEV TOOLKIT
+
+- `sys.path`
+  - list directories python interpreter searches for packages
+  - first item is current directory ('')
+  - last item is `site-packages/`
+
+- `site-packages/`
+  - third-party packages are installed here
+  - location depends on OS, Python version, installation procedure
+  - will be somewhere _inside_ the Python installation
+  - may not even be called `site-packages` (debian: `dist-packages/`)
+
+- packaging: current state of affairs
+  - multiple tools:
+    - pip (installing packages created by others, preinstalled >= 3.4)
+    - setuptools (use for creating and distributing packages)
+    - distutils (discontinued, merged into setuptools)
+    - easy_install (included in setuptools)
+    - ez_setup
+  -multiple formats:
+    - egg
+    - wheel
+    - source dist
+
+- Python Packaging Authority (PyPA)
+
+- `pip install 'package<=1.0'` (use quotes to prevent unix redirection
+- `pip show package`
+- `pip freeze > requirements.txt`
+- `pip install -r requirements.txt`
+
+- Cheese Shop: http://pypi.python.org/
